@@ -1,10 +1,16 @@
 <p style="color: green"><%= notice %></p>
-
-<%= render @category %>
-
-<div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
-
-  <%= button_to "Destroy this category", @category, method: :delete %>
-</div>
+<h1><%= @category.name %></h1>
+<p><%= @category.icon %></p>
+<% if @entities.empty? %>
+  <p>No entities found.</p>
+<% else %>
+  <h2>Entities:</h2>
+  <ul>
+    <% @entities.each do |entity| %>
+      <li><%= link_to entity.name, entity_path(entity) %><%= entity.amount%></li>
+    <% end %>
+  </ul>
+<% end %>
+<p><%= link_to "Back to categories", categories_path %></p>
+<p><%= link_to "New entity", "#{new_entity_path}?category_id=#{@category.id}" %></p>
+<p><%= button_to "Delete category", @category, method: :delete %></p>
