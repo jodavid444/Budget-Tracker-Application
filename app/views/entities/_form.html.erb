@@ -1,5 +1,3 @@
-<%= params[:category_id]%>
-
 <%= form_with(model: entity) do |form| %>
   <% if entity.errors.any? %>
     <div style="color: red">
@@ -13,23 +11,26 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="home-input">
+    <div class="field">
+      <%= form.text_field :name, required:true, placeholder: 'Name' %>
+    </div>
+
+    <div class="field">
+      <%= form.number_field :amount, step: "0.01", required:true, placeholder: 'Amount' %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.number_field :amount, step: "0.01"  %>
-  </div>
+  <h2 class="select-category">Select Categories</h2>
+  <p style="font-size: 12px; text-align: center; margin:0; font-style: italic ">User can select more than one category</p>
+  <p style="font-size: 12px; text-align: center; margin:0 0 20px 0; font-style: italic ">Previeous category already selected</p>
 
-  <div>
-    <%= form.label :category_ids, 'Categories' %>
-    <%= form.select :category_ids, @categories.map { |category| [category.name, category.id, selected: @category_id == category.id] }, {include_blank: false}, { multiple: true} %>
+  <div class="select-cont">
+    <%= form.select :category_ids, @categories.map { |category| [category.name, category.id, selected: @category_id == category.id] }, {include_blank: false}, { multiple: true, required: true} %>
   </div>
   <%= form.hidden_field :category_id, value: @category_id %>
 
-  <div>
-    <%= form.submit %>
+  <div class="create-category-btn">
+    <%= form.submit 'Create Transaction' %>
   </div>
 <% end %>

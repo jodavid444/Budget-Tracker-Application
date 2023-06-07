@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name, placeholder: "Name" %>
+  <div class="home-input">
+    <div class="field">
+      <%= form.text_field :name, placeholder: "Name" %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :icon, placeholder: "Icon Link" %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon, placeholder: "Icon Link" %>
-  </div>
-
-  <div>
+  <div class="create-category-btn">
     <%= form.submit %>
   </div>
 <% end %>

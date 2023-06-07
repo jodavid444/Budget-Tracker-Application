@@ -1,16 +1,29 @@
-<p style="color: green"><%= notice %></p>
-<h1><%= @category.name %></h1>
-<p><%= @category.icon %></p>
-<% if @entities.empty? %>
-  <p>No entities found.</p>
-<% else %>
-  <h2>Entities:</h2>
-  <ul>
-    <% @entities.each do |entity| %>
-      <li><%= link_to entity.name, entity_path(entity) %><%= entity.amount%></li>
-    <% end %>
-  </ul>
-<% end %>
-<p><%= link_to "Back to categories", categories_path %></p>
-<p><%= link_to "New entity", "#{new_entity_path}?category_id=#{@category.id}" %></p>
-<p><%= button_to "Delete category", @category, method: :delete %></p>
+<nav class="nav-bar">
+  <a href="../" class="back-link"><i class='fa-solid fa-arrow-left fa-xl'></i></a>
+  <h2>Category</h2>
+  <% if(user_signed_in?) %>
+    <%= button_to "Sign out", destroy_user_session_path, :method => :delete, data: {turbo: false}, class: "nav-bar-btn"%>
+  <% end %>
+</nav>
+<p class="notice-msg"><%= notice %></p>
+<div class="category">
+  <div class="category-item-info">
+    <img src="<%= @category.icon%>" class='category-icon'>
+    <h3><%= @category.name %></h3>
+  </div>
+    <h4 class="total-amount">Total amount: <span>$<%= @category.entities.sum(:amount)%></span></h4>
+  <% if @entities.empty? %>
+    <h2 class="transactions-title">Transactions</h2>
+    <p class="transactions-title">No transactions have been added yet.</p>
+  <% else %>
+    <h2 class="transactions-title">Transactions</h2>
+      <% @entities.each do |entity| %>
+        <div class="transaction">
+          <h3><%= entity.name%></h3>
+          <h4>$<%= entity.amount%></h4>
+        </div>
+      <% end %>
+  <% end %>
+</div>
+<div class="height"></div>
+<%= link_to "Add a new transaction", "#{new_entity_path}?category_id=#{@category.id}", class: 'add-category-btn', style: 'left: 0' %>
