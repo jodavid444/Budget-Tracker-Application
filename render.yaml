@@ -1,0 +1,20 @@
+databases:
+  - name: budget-tracker
+    databaseName: budget_tracker_development
+    user: budget_tracker
+    plan: free
+
+services:
+  - type: web
+    name: budget-tracker
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: budget-tracker
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+    plan: free

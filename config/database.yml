@@ -58,8 +58,8 @@ development:
 test:
   <<: *default
   database: budget_tracker_test
-  username: postgres
-  password: 12345678
+  # username: postgres
+  # password: 12345
 
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -84,4 +84,4 @@ test:
 #
 production:
   <<: *default
-   url: <%= ENV["DATABASE_URL"] %>
+  url: <%= ENV["DATABASE_URL"] %>
