@@ -1,12 +1,13 @@
-<div id="<%= dom_id category %>">
-  <p>
+<div id="<%= dom_id category %>" class="categories-item">
+  <div class="category-info">
     <img src="<%= category.icon%>" class='category-icon'>
-  </p>
-  <p>
-    <strong>Name:</strong>
-    <%= category.name %>
-    $<%= category.entities.sum(:amount)%>
-  </p>
-    <small><%= category.created_at.strftime("%d %b %Y") %></small>
-    <p><%= button_to "Delete category", category, method: :delete %></p>
+    <div class="category-name-date">
+      <%= link_to category.name , category %>
+      <small><%= category.created_at.strftime("%d %b %Y") %></small>
+    </div>
+  </div>
+  <div>
+    <p id="amount">$<%= category.entities.sum(:amount)%></p>
+    <p><%= button_to "Delete category", category, method: :delete , class: 'category-delete-btn'%></p>
+  </div>
 </div>
