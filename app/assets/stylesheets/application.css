@@ -1,15 +1,80 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  margin: 0;
+}
+
+.logo {
+  width: 29px;
+  height: 29px;
+}
+
+.home-container {
+  margin: 10px;
+}
+
+.home-title {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.home-title span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-texts p {
+  text-align: center;
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 180px;
+}
+
+.home-buttons a {
+  text-decoration: none;
+  padding: 15px 0;
+  text-align: center;
+  width: 90%;
+}
+
+.home-buttons a:first-child {
+  background-color: #3778c2;
+  color: white;
+  border-radius: 3px;
+}
+
+.home-buttons a:last-child {
+  background-color: white;
+  color: gray;
+}
+
+.category-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.add-category-btn {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  padding: 30px 0;
+  text-decoration: none;
+  color: #fff;
+  background-color: #5fb523;
+  outline: 1px white solid;
+  outline-offset: -13px;
+}
+
+.height {
+  height: 80px;
+}
