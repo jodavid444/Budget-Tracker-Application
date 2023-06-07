@@ -32,7 +32,7 @@ class EntitiesController < ApplicationController
     respond_to do |format|
       if @entity.save
         format.html do
-          redirect_to category_url(entity_params[:category_id]), notice: 'Entity was successfully created.'
+          redirect_to category_url(entity_params[:category_id]), notice: 'Transaction was successfully created.'
         end
         format.json { render :show, status: :created, location: @entity }
       else

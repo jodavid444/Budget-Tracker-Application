@@ -3,11 +3,20 @@
 body {
   font-family: 'Proxima Nova', sans-serif;
   margin: 0;
+  background-color: #cecece30;
+  color: #434b549a;
 }
 
 .logo {
   width: 29px;
   height: 29px;
+}
+
+.notice-msg {
+  color: white;
+  background-color: #5fb523;
+  margin: 0;
+  text-align: center;
 }
 
 .home-container {
@@ -45,6 +54,17 @@ body {
   width: 90%;
 }
 
+.category-name-date a {
+  color: rgba(0, 0, 0, 0.705);
+  text-decoration: none;
+}
+
+.home-links a {
+  display: block;
+  text-decoration: none;
+  color: #434b5477;
+}
+
 .home-buttons a:first-child {
   background-color: #3778c2;
   color: white;
@@ -77,4 +97,180 @@ body {
 
 .height {
   height: 80px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  color: white;
+  background: rgb(55, 120, 194);
+  background: linear-gradient(180deg, rgba(55, 120, 194, 1) 0%, rgba(31, 76, 128, 1) 100%);
+}
+
+.nav-bar input {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 15px;
+}
+
+.nav-bar h2 {
+  margin: 0;
+  font-weight: 100;
+}
+
+.nav-bar-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 15px;
+  padding: 0;
+}
+
+.home-input {
+  margin-top: 15px;
+}
+
+.field input {
+  padding: 15px 0 15px 10px;
+  width: 99%;
+  outline: none;
+  border: 1px solid rgba(190, 190, 190, 0.616);
+}
+
+.home-links {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.home-links a:nth-child(3) {
+  display: none;
+}
+
+.back-link {
+  width: 48px;
+  color: white;
+}
+
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  background-color: #fff;
+  padding: 20px 10px;
+  font-weight: 100;
+}
+
+.total-amount span {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.705);
+}
+
+.categories-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: 15px auto;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  padding: 5px 10px;
+}
+
+#amount {
+  text-align: right;
+  color: rgba(0, 0, 0, 0.705);
+  font-weight: 600;
+}
+
+.category-name-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.category-info {
+  display: flex;
+  gap: 10px;
+}
+
+.category-delete-btn {
+  border: none;
+  background-color: #3778c2;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.create-category-btn input {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 99%;
+  padding: 30px 0;
+  text-decoration: none;
+  color: #fff;
+  background-color: #5fb523;
+  outline: 1px white solid;
+  outline-offset: -13px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 15px auto;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  padding: 10px;
+}
+
+.category-item-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.transactions-title {
+  text-align: center;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgba(190, 190, 190, 0.616);
+}
+
+.transaction h4 {
+  color: rgba(0, 0, 0, 0.705);
+}
+
+.select-cont {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-cont select {
+  width: 90%;
+  margin: auto;
+}
+
+.select-cont select option {
+  font-size: 20px;
+  text-align: center;
+  border-top: 1px solid rgba(190, 190, 190, 0.616);
+  color: #868e8fd8;
+}
+
+.transaction h3 {
+  text-transform: capitalize;
+}
+
+.select-category {
+  text-align: center;
+  margin-bottom: 7px;
 }

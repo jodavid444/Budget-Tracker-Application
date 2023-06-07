@@ -1,9 +1,10 @@
-<h1>New category</h1>
+<p class="notice-msg"><%= notice %></p>
+<nav class="nav-bar">
+  <a href="../" class="back-link"><i class='fa-solid fa-arrow-left fa-xl'></i></a>
+  <h2>New Categoroy</h2>
+  <% if(user_signed_in?) %>
+    <%= button_to "Sign out", destroy_user_session_path, :method => :delete, data: {turbo: false}, class: "nav-bar-btn"%>
+  <% end %>
+</nav>
 
 <%= render "form", category: @category %>
-
-<br>
-
-<div>
-  <%= link_to "Back to categories", categories_path %>
-</div>

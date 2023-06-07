@@ -1,9 +1,9 @@
-<h1>New entity</h1>
+<nav class="nav-bar">
+  <a href="../" class="back-link"><i class='fa-solid fa-arrow-left fa-xl'></i></a>
+  <h2>New Transaction</h2>
+  <% if(user_signed_in?) %>
+    <%= button_to "Sign out", destroy_user_session_path, :method => :delete, data: {turbo: false}, class: "nav-bar-btn"%>
+  <% end %>
+</nav>
 
 <%= render "form", entity: @entity %>
-
-<br>
-
-<div>
-  <%= link_to "Back to entities", entities_path %>
-</div>
