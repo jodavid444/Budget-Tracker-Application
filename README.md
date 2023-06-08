@@ -5,6 +5,8 @@
   - [🛠 Built With ](#-built-with-)
   - [Tech Stack ](#tech-stack-)
   - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+  - [📽️ Video Presentation](#video)
   - [💻 Getting Started ](#-getting-started-)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -17,7 +19,9 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-## 📖 Budget Tracker Application<a name="about-project"></a> is a web-based budgeting application built using Ruby on Rails and PostgreSQL. This application allows users to track their income and expenses and provides a visual representation of their budget. Users can add or remove income and expenses, and the application automatically calculates the remaining budget. The website is responsive and optimized for use on desktop and mobile devices
+## 📖 Budget Tracker Application<a name="about-project"></a>
+
+ is a web-based budgeting application built using Ruby on Rails and PostgreSQL. This application allows users to track their income and expenses and provides a visual representation of their budget. Users can add or remove income and expenses, and the application automatically calculates the remaining budget. The website is responsive and optimized for use on desktop and mobile devices
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -33,6 +37,17 @@
 - [ ] **Login registered account**
 - [ ] **Create categories and transactions**
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### 🚀 Live Demo <a name="live-demo"></a>
+
+- [Budget Tracker](https://budget-tracker-azmz.onrender.com)
+
+### 📽️ Video Presentation <a name="video"></a>
+
+[Video Link](https://www.loom.com/share/3890fea7984b4fabab1398b92ab55991)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -51,7 +66,7 @@ Clone this repository to your desired folder:
 
 Example commands:
 
-- 1. Clone this repository using GitBash or the command Terminal:
+-  Clone this repository using GitBash or the command Terminal:
 
 ```sh
 git clone https://github.com/jodavid444/Budget-Tracker-Application.git
@@ -61,19 +76,19 @@ git clone https://github.com/jodavid444/Budget-Tracker-Application.git
 
 ## Install
 
-- 2. Inside the project directory, install the project's dependencies:
+- Inside the project directory, install the project's dependencies:
 
 ```sh
   bundle install (install all dependencies)
 ```
 
-3. Create the app's database
+- Create the app's database
 
 ```sh
 rails db:create
 ```
    
-4. Setup the app's database
+- Setup the app's database
   
 ```sh
  rails db:setup
@@ -123,6 +138,8 @@ If you like this project please leave a star. Thank you 🙏
 
 - I would like to thank Microverse for the great project idea. ❤️
  - Credit goes to [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) whose original design was used.
+
+ Icons were used from [Flaticon](https://www.flaticon.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
